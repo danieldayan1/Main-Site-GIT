@@ -1,0 +1,18 @@
+.Header{
+    border: 1px solid black;
+}
+
+
+h1{
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Karantina', cursive;
+    font-family: 'Poppins', sans-serif;
+    color:rgb(66, 55, 163);
+    filter:alpha(opacity=40);
+    margin: 0px;
+    text-align: center;
+}
+
+.Header a{
+    text-decoration:none;
+}

@@ -1,0 +1,15 @@
+.Home{
+    height: 550px;
+}
+
+.cell{
+    display: inline;
+    border: 1px solid black;
+    position: relative;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.cell a{
+    text-decoration: none;
+}
