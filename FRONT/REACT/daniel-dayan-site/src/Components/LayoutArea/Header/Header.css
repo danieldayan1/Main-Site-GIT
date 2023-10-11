@@ -1,16 +1,20 @@
+@font-face{
+    font-family: 'myDiffFont';
+    src : url('../../../Assets/fonts/Storyboo.TTF')
+  }
+
 .Header{
     border: 1px solid black;
+    padding: 20px;
 }
 
 
 h1{
-    font-family: 'Cabin', sans-serif;
-    font-family: 'Karantina', cursive;
-    font-family: 'Poppins', sans-serif;
     color:rgb(66, 55, 163);
     filter:alpha(opacity=40);
     margin: 0px;
     text-align: center;
+    font-family: 'myDiffFont';
 }
 
 .Header a{

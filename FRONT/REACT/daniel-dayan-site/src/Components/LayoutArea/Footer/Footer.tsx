@@ -17,7 +17,7 @@ function Footer(): JSX.Element {
 
     return (
         <div className="Footer">
-            <p>All Rights Reserved  &copy; {date}  {time}</p>
+            <p> {date}  {time}</p>
         </div>
     );
 }

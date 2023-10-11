@@ -5,11 +5,14 @@
 .cell{
     display: inline;
     border: 1px solid black;
-    position: relative;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 15.5%;
+    padding-right: 15.5%;
 }
 
-.cell a{
+div a{
     text-decoration: none;
+}
+
+a:link{
+    color: black;
 }
