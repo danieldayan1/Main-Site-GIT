@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 import { link } from "fs";
+import repositoryModel from "../../../Models/repositoryModel";
+import repositoryService from "../../../Services/repositoriesService";
 
 
 
@@ -10,6 +12,7 @@ import { link } from "fs";
 function Home(): JSX.Element {
 
     const [title,setTitle] = useState<String>(" ");
+    const [repos,setRepos] = useState<repositoryModel[]>([])
 
     const calcTitle = () =>{
         let time = new Date();
@@ -23,6 +26,10 @@ function Home(): JSX.Element {
     }
 
     useEffect(()=>{ 
+
+        repositoryService.fetchAllRepositories()
+        .then(repositories=>{setRepos(repositories)})
+        .catch(err=>alert(err))
 
         calcTitle();
         setInterval(
