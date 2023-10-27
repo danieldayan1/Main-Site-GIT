@@ -6,8 +6,16 @@ import repositoryModel from "../Models/repositoryModel";
 class RepositoryService{
 
     public async fetchAllRepositories():Promise<repositoryModel[]>{
-        const response = await axios.get<[]>(config.reposUrl);
-        return response.data;
+        let repos = []
+        const response = await axios.get<any>(config.reposUrl);
+
+        for(let i=0;i<response.data.length;i++){
+            const rep = new repositoryModel();
+            rep.name = response.data[i].name;
+            rep.url = response.data[i].html_url;
+            repos.push(rep);
+        }
+        return repos;
     }
 }
 
